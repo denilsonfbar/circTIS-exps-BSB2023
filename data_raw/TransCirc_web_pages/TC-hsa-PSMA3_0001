@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>TransCirc</title>
+    <!-- Bootstrap -->
+    <link href="/transcirc/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/transcirc/assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.biosino.org/template/assets/css/header.css">
+    <link rel="stylesheet" href="https://www.biosino.org/template/assets/css/footer.css">
+    <link href="/transcirc/assets/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="assets/images/icon_16X16.ico" type="image/x-icon"/>
+    <link rel="icon" href="/transcirc/assets/images/icon_32X32.ico" sizes="32x32"/>
+    <link rel="icon" href="/transcirc/assets/images/icon_48X48.ico" sizes="48x48"/>
+    <link rel="icon" href="/transcirc/assets/images/icon_64X64.ico" sizes="64x64"/>
+    <link rel="icon" href="/transcirc/assets/images/icon_128X128.ico" sizes="128x128"/>
+    <link href="/transcirc/layer/skin/default/layer.css" rel="stylesheet"/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/transcirc/assets/js/jquery-1.11.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/transcirc/assets/js/bootstrap.js"></script>
+    <script src="/transcirc/assets/js/echarts.min.js" type="text/javascript"></script>
+    <script src="/transcirc/assets/js/infographic.js" type="text/javascript"></script>
+    <script src="/transcirc/layer/layer.js"></script>
+</head>
+<body class="other-page">
+<div id="page-content">
+    <div class="search-box">
+    <div class="container clearfix">
+        <a href="/transcirc" class="logo"><img src="/transcirc/assets/images/logo-small.png" alt="transcirc"></a>
+        <div class="menu">
+            <a href="/transcirc">Home</a>
+            <a href="/transcirc/search">Data</a>
+            <a href="/transcirc/download">Download</a>
+            <a href="/transcirc/about">About</a>
+            <a href="/transcirc/help">Help</a>
+        </div>
+        <form action="/transcirc/search" id="resultform" method="post">
+        <div class="search">
+            <input type="text" class="form-control input-lg" name="keywords" value="">
+            <a href="javascript:document.getElementById('resultform').submit()"><i class="fa fa-search"></i></a>
+        </div>
+        </form>
+    </div>
+</div><div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h4 class="panel-title pull-left">CircID: TC-hsa-PSMA3_0001</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row interval-sm">
+                <div class="col-xs-5">
+                    <div class="panel panel-default cpp">
+                        <div class="panel-heading">CircRNA information</div>
+                        <div class="detail-base-info">
+                            <div class="dbi-box">
+                                <div class="title">Taxonomy:</div>
+                                <div class="content"><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=9606" target="_blank">Homo sapiens&nbsp;</a></div>
+                                <div class="title">Genome Version:</div>
+                                <div class="content">hg38&nbsp;</div>
+                                <div class="title">Location:</div>
+                                <div class="content">chr14:58244848~58270998&nbsp;</div>
+                            </div>
+                            <div class="dbi-box">
+                                <div class="title">Gene:</div>
+                                <div class="content"><a href="https://www.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000100567.12" target="_blank">PSMA3</a></div>
+                                <div class="title">Gene type:</div>
+                                <div class="content">protein_coding</div>
+                                <div class="title">Strand:</div>
+                                <div class="content">+</div>
+                                <div class="title">exons:</div>
+                                <div class="content"><a href="#exons">10</a></div>
+                                <div class="title">ORFS:</div>
+                                <div class="content"><a href="#orfs">1</a></div>
+                            </div>
+                            <div class="dbi-box">
+                                <div class="title">Xref:</div>
+                                <div class="content">
+                                    <a href="http://159.226.67.237:8080/new/circ_detail.php?ID=hsa-PSMA3_0020" target="_blank">circAtlas: hsa-PSMA3_0020</a>
+                                            <br>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-7">
+                    <div class="panel panel-default detail-panel cpp">
+                        <div class="panel-heading">Evidences</div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-condensed table-evi">
+                                <tbody>
+                                <tr>
+                                                <td width="225" class=""><i class="fa fa-check"></i>
+                                                    Ribosome/polysome profiling<span class="fa fa-question-circle" data-toggle="tooltip"
+                                                                    data-content="<b>Ribosomal and polysome binding evidence:</b><p>
+The translation of mRNAs is carried out by ribosome, which can form polysomes in actively translated mRNAs. Therefore the association with ribosomes/polysomes can serve as a strong predictor of the potential for translatable circRNA. We used published ribosomal foot printing data and polysomal profile to score the association of circRNAs with ribosomes, which can serve as a strong predictor for translation of circRNAs."></span>
+
+                                                        </td>
+                                                <td width="20">0.0</td>
+                                                <td rowspan="7">
+                                                    <div class="position-relative">
+                                                        <div id="chart-1" style="height: 220px; width: 100%;"></div>
+                                                        <div style="position:absolute;right: 5px;top: 0px;font-size: 12px">
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="text-muted width-100 text-right">Evidence score: </span><b class="text-primary">3.078954</b>
+                                                            </div>
+                                                            <div class="d-flex align-items-center">
+                                                                <span class="text-muted width-100 text-right">MS Q-Value: </span><b class="text-primary"></b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                                <td class="active"><i class="fa fa-check"></i>
+                                                    <a href="#orfs">ORF</a>
+                                                        <span class="fa fa-question-circle"
+                                                                  data-toggle="tooltip"
+                                                                  data-content="<b>ORF length:</b><p>
+The length of potential open reading frame (ORF) is a common predictor for coding RNA vs. non-coding RNAs. Usually a long ORF cannot be found in a non-coding RNA, and thus we used the ORF length > 20aa as a minimal requirement for circRNA encoded peptide. It should be noticed that ORF length is a relatively weak predictor, as many small peptide were recently found to be coded by “non-coding” RNAs in human transcriptome, whereas circRNAs with a long ORF will have better chance to be a coding mRNA."></span>
+                                                        </td>
+                                                <td width="20">1.0</td>
+                                            </tr>
+                                        <tr>
+                                                <td class="active"><i class="fa fa-check"></i>
+                                                    <a href="#ires">IRES sequence</a>
+                                                        <span class="fa fa-question-circle" data-toggle="tooltip"
+                                                                 data-content="<b>IRES sequences:</b><p>
+Since circRNAs are covalently closed molecules without free ends, the translation of circRNAs must use an unconventional initiation mechanism known as cap-independent translation initiation. Such initiation pathway has to be driven by IRESs (internal ribosomal entry sites), which are typically short RNA fragments with specialized secondary structure. Although most well-studied IRESs were found in various virus RNAs, there are several cases where the endogenous genes contain IRES to drive translation in a cap-independent fashion. Recently, we and other group conducted a systematic screen for IRES elements in human genome or from random sequences, and thus we used all the available IRES information as evidence to support circRNA translation. "></span>
+                                                        </td>
+                                                <td width="20">0.42698</td>
+                                            </tr>
+                                        <tr>
+                                                <td class="active"><i class="fa fa-check"></i>
+                                                    <a href="#tis">Translation initiation site</a>
+                                                        <span class="fa fa-question-circle" data-toggle="tooltip"
+                                                                  data-content="<b>Translation initiation site (TIS):</b><p>
+A global mapping of TIS codons at nearly single-nucleotide resolution has been achieved by GTI-seq, revealing an unambiguous set of several thousands TIS codons across the entire human transcriptome. We used the data from TISdb based on GTI-seq as an indirect evidence supporting the translation of circRNAs, which also associated with potential ORFs."></span>
+                                                        </td>
+                                                <td width="20">1.0</td>
+                                            </tr>
+                                        <tr>
+                                                <td class="active"><i class="fa fa-check"></i>
+                                                    SeqComp<span class="fa fa-question-circle" data-toggle="tooltip"
+                                                                  data-content="<b>sequence composition:</b><p>
+The amino acid (aa) sequences of all natural proteins only occupy a very small fraction of the possible sequence space, mostly because only a sub-fraction of sequences can form stable proteins. Therefore the protein with “unnatural” sequence tend to be degraded rapidly, and the sequence similarity to all natural proteins can serve as a strong predictor to identify authentic proteins in random strings of amino acid sequences. Therefore we used machine learning approach to predict how likely a given sequence is with natural proteins, and applied this prediction to score for how likely a given ORF encoded by circRNAs can serve as a template for functional protein."></span>
+                                                        </td>
+                                                <td width="20">0.65197</td>
+                                            </tr>
+                                        <tr>
+                                                <td class=""><i class="fa fa-check"></i>
+                                                    m6A sites<span class="fa fa-question-circle pull-right" data-toggle="tooltip"
+                                                                  data-content="<b>m6A sites:</b><p>
+The N-6-methyladenosine (m6A) is the most common modification of RNAs, and have been found in many types of non-coding and coding RNAs. We have recently found that circRNAs undergo extensive modification m6A, which can drive circRNA translation through recruiting reader protein YTHDF3 that interacts with translation initiation factors (most notably eIF4G2). Therefore we used published m6A modification data from REPIC database (identified by three different tools), and mapped them back to circRNA sequences. The existence of  experimentally validated m6A sites in circRNA can also serve as a predictor for translatable circRNA, which are integrated in this database."></span>
+                                                        </td>
+                                                <td width="20">0.0</td>
+                                            </tr>
+                                        <tr>
+                                                <td class=""><i class="fa fa-check"></i>
+                                                    MS evidence<span
+                                                                    class="fa fa-question-circle" data-toggle="tooltip"
+                                                                    data-content="<b>Proteomics evidence by Mass spectrometry:</b><p>
+Mass spectrometry is an important method to accurate identify and characterize proteins. Several large scale mass-spectrometry experiments have been conducted to study human proteome, however only about ~50% of MS spectra can be reliably assigned to known peptides coded by human mRNAs even considering the post-translational modification of protein. This result suggests that there are a large fraction of “hidden proteome” encoded by non-canonical mRNA, some of which could be coded by circRNAs. We have defined a new set of rules and rigorous filters to search circRNA-encoded peptide from MS dataset, and use the search results as a strong evidence for circRNA translation. We included all the raw MS spectra supporting the circRNA encoded peptides that cross the back-splice junctions."></span>
+                                                        </td>
+                                                <td width="20">0.0</td>
+                                            </tr>
+                                        </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel panel-default detail-panel cpp">
+                        <div class="panel-heading clearfix"><span class="pull-left">Other evidences</span><a href="#upload" data-toggle="modal" class="btn-success btn-xs pull-right ph-btnxs"><i class="fa fa-upload"></i> Upload</a></div>
+                        <div class="table-responsive oevi">
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <th>File</th>
+                                    <th>Author</th>
+                                    <th width="150">Date</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default cpp">
+                    <div class="panel-heading">Structure</div>
+                    <div class="panel-body crs">
+                        <div class="position-relative" style="padding-top: 15px">
+                            <div class="str-chart" id="chart-5" style="height: 200px;"></div>
+                            <div class="d-flex align-items-center" style="position:absolute; top: 0;right:0">
+                                <div class="d-flex">
+                                    <img src="/transcirc/assets/images/s-icon-1.png" class="m-r-5"> IRES
+                                </div>
+                                <div class="d-flex m-l-15">
+                                    <img src="/transcirc/assets/images/s-icon-2.png" class="m-r-5"> m6A
+                                </div>
+                                <div class="d-flex m-l-15">
+                                    <img src="/transcirc/assets/images/s-icon-3.png" class="m-r-5"> TIS
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="panel panel-default cpp">
+                <div class="panel-heading">circRNA sequence</div>
+                <div class="panel-body crs" id="crs">
+                    <span><font id=seq0>T</font><font id=seq1>T</font><font id=seq2>T</font><font id=seq3>G</font><font id=seq4>C</font><font id=seq5>G</font><font id=seq6>G</font><font id=seq7>C</font><font id=seq8>A</font><font id=seq9>T</font></span><span><font id=seq10>C</font><font id=seq11>C</font><font id=seq12>T</font><font id=seq13>G</font><font id=seq14>T</font><font id=seq15>G</font><font id=seq16>G</font><font id=seq17>T</font><font id=seq18>A</font><font id=seq19>T</font></span><span><font id=seq20>A</font><font id=seq21>G</font><font id=seq22>G</font><font id=seq23>G</font><font id=seq24>G</font><font id=seq25>A</font><font id=seq26>A</font><font id=seq27>G</font><font id=seq28>C</font><font id=seq29>G</font></span><span><font id=seq30>C</font><font id=seq31>T</font><font id=seq32>C</font><font id=seq33>C</font><font id=seq34>G</font><font id=seq35>G</font><font id=seq36>G</font><font id=seq37>C</font><font id=seq38>C</font><font id=seq39>T</font></span><span><font id=seq40>G</font><font id=seq41>G</font><font id=seq42>A</font><font id=seq43>A</font><font id=seq44>T</font><font id=seq45>C</font><font id=seq46>C</font><font id=seq47>C</font><font id=seq48>T</font><font id=seq49>A</font></span><span><font id=seq50>C</font><font id=seq51>G</font><font id=seq52>C</font><font id=seq53>G</font><font id=seq54>T</font><font id=seq55>C</font><font id=seq56>C</font><font id=seq57>C</font><font id=seq58>T</font><font id=seq59>T</font></span><span><font id=seq60>T</font><font id=seq61>G</font><font id=seq62>G</font><font id=seq63>G</font><font id=seq64>T</font><font id=seq65>T</font><font id=seq66>T</font><font id=seq67>A</font><font id=seq68>G</font><font id=seq69>C</font></span><span><font id=seq70>A</font><font id=seq71>C</font><font id=seq72>G</font><font id=seq73>A</font><font id=seq74>T</font><font id=seq75>G</font><font id=seq76>A</font><font id=seq77>G</font><font id=seq78>C</font><font id=seq79>T</font></span><span><font id=seq80>C</font><font id=seq81>A</font><font id=seq82>A</font><font id=seq83>T</font><font id=seq84>C</font><font id=seq85>G</font><font id=seq86>G</font><font id=seq87>C</font><font id=seq88>A</font><font id=seq89>C</font></span><span><font id=seq90>T</font><font id=seq91>G</font><font id=seq92>G</font><font id=seq93>G</font><font id=seq94>T</font><font id=seq95>A</font><font id=seq96>T</font><font id=seq97>G</font><font id=seq98>A</font><font id=seq99>C</font></span><span><font id=seq100>C</font><font id=seq101>T</font><font id=seq102>G</font><font id=seq103>T</font><font id=seq104>C</font><font id=seq105>A</font><font id=seq106>G</font><font id=seq107>C</font><font id=seq108>C</font><font id=seq109>T</font></span><span><font id=seq110>C</font><font id=seq111>T</font><font id=seq112>A</font><font id=seq113>C</font><font id=seq114>A</font><font id=seq115>T</font><font id=seq116>T</font><font id=seq117>C</font><font id=seq118>T</font><font id=seq119>C</font></span><span><font id=seq120>T</font><font id=seq121>C</font><font id=seq122>C</font><font id=seq123>T</font><font id=seq124>G</font><font id=seq125>A</font><font id=seq126>C</font><font id=seq127>G</font><font id=seq128>G</font><font id=seq129>A</font></span><span><font id=seq130>A</font><font id=seq131>G</font><font id=seq132>A</font><font id=seq133>G</font><font id=seq134>T</font><font id=seq135>T</font><font id=seq136>T</font><font id=seq137>T</font><font id=seq138>T</font><font id=seq139>C</font></span><span><font id=seq140>A</font><font id=seq141>A</font><font id=seq142>G</font><font id=seq143>T</font><font id=seq144>T</font><font id=seq145>G</font><font id=seq146>A</font><font id=seq147>A</font><font id=seq148>T</font><font id=seq149>A</font></span><span><font id=seq150>T</font><font id=seq151>G</font><font id=seq152>C</font><font id=seq153>T</font><font id=seq154>A</font><font id=seq155>T</font><font id=seq156>G</font><font id=seq157>A</font><font id=seq158>A</font><font id=seq159>G</font></span><span><font id=seq160>G</font><font id=seq161>C</font><font id=seq162>T</font><font id=seq163>G</font><font id=seq164>T</font><font id=seq165>G</font><font id=seq166>G</font><font id=seq167>A</font><font id=seq168>A</font><font id=seq169>A</font></span><span><font id=seq170>A</font><font id=seq171>T</font><font id=seq172>A</font><font id=seq173>G</font><font id=seq174>T</font><font id=seq175>A</font><font id=seq176>G</font><font id=seq177>T</font><font id=seq178>A</font><font id=seq179>C</font></span><span><font id=seq180>A</font><font id=seq181>G</font><font id=seq182>C</font><font id=seq183>T</font><font id=seq184>A</font><font id=seq185>T</font><font id=seq186>T</font><font id=seq187>G</font><font id=seq188>G</font><font id=seq189>A</font></span><span><font id=seq190>A</font><font id=seq191>T</font><font id=seq192>C</font><font id=seq193>A</font><font id=seq194>G</font><font id=seq195>A</font><font id=seq196>T</font><font id=seq197>G</font><font id=seq198>C</font><font id=seq199>A</font></span><span><font id=seq200>A</font><font id=seq201>A</font><font id=seq202>G</font><font id=seq203>A</font><font id=seq204>T</font><font id=seq205>G</font><font id=seq206>G</font><font id=seq207>T</font><font id=seq208>G</font><font id=seq209>T</font></span><span><font id=seq210>T</font><font id=seq211>G</font><font id=seq212>T</font><font id=seq213>C</font><font id=seq214>T</font><font id=seq215>T</font><font id=seq216>T</font><font id=seq217>G</font><font id=seq218>G</font><font id=seq219>G</font></span><span><font id=seq220>G</font><font id=seq221>T</font><font id=seq222>A</font><font id=seq223>G</font><font id=seq224>A</font><font id=seq225>A</font><font id=seq226>A</font><font id=seq227>A</font><font id=seq228>A</font><font id=seq229>T</font></span><span><font id=seq230>T</font><font id=seq231>A</font><font id=seq232>G</font><font id=seq233>T</font><font id=seq234>C</font><font id=seq235>C</font><font id=seq236>T</font><font id=seq237>T</font><font id=seq238>T</font><font id=seq239>C</font></span><span><font id=seq240>T</font><font id=seq241>A</font><font id=seq242>A</font><font id=seq243>A</font><font id=seq244>C</font><font id=seq245>T</font><font id=seq246>T</font><font id=seq247>T</font><font id=seq248>A</font><font id=seq249>T</font></span><span><font id=seq250>G</font><font id=seq251>A</font><font id=seq252>A</font><font id=seq253>G</font><font id=seq254>A</font><font id=seq255>A</font><font id=seq256>G</font><font id=seq257>G</font><font id=seq258>T</font><font id=seq259>T</font></span><span><font id=seq260>C</font><font id=seq261>C</font><font id=seq262>A</font><font id=seq263>A</font><font id=seq264>C</font><font id=seq265>A</font><font id=seq266>A</font><font id=seq267>A</font><font id=seq268>A</font><font id=seq269>G</font></span><span><font id=seq270>A</font><font id=seq271>C</font><font id=seq272>T</font><font id=seq273>T</font><font id=seq274>T</font><font id=seq275>T</font><font id=seq276>T</font><font id=seq277>A</font><font id=seq278>A</font><font id=seq279>T</font></span><span><font id=seq280>G</font><font id=seq281>T</font><font id=seq282>T</font><font id=seq283>G</font><font id=seq284>A</font><font id=seq285>T</font><font id=seq286>C</font><font id=seq287>G</font><font id=seq288>G</font><font id=seq289>C</font></span><span><font id=seq290>A</font><font id=seq291>T</font><font id=seq292>G</font><font id=seq293>T</font><font id=seq294>T</font><font id=seq295>G</font><font id=seq296>G</font><font id=seq297>A</font><font id=seq298>A</font><font id=seq299>T</font></span><span><font id=seq300>G</font><font id=seq301>G</font><font id=seq302>C</font><font id=seq303>A</font><font id=seq304>G</font><font id=seq305>T</font><font id=seq306>A</font><font id=seq307>G</font><font id=seq308>C</font><font id=seq309>A</font></span><span><font id=seq310>G</font><font id=seq311>G</font><font id=seq312>T</font><font id=seq313>T</font><font id=seq314>T</font><font id=seq315>G</font><font id=seq316>T</font><font id=seq317>T</font><font id=seq318>G</font><font id=seq319>G</font></span><span><font id=seq320>C</font><font id=seq321>A</font><font id=seq322>G</font><font id=seq323>A</font><font id=seq324>T</font><font id=seq325>G</font><font id=seq326>C</font><font id=seq327>T</font><font id=seq328>C</font><font id=seq329>G</font></span><span><font id=seq330>T</font><font id=seq331>T</font><font id=seq332>C</font><font id=seq333>T</font><font id=seq334>T</font><font id=seq335>T</font><font id=seq336>A</font><font id=seq337>G</font><font id=seq338>C</font><font id=seq339>A</font></span><span><font id=seq340>G</font><font id=seq341>A</font><font id=seq342>C</font><font id=seq343>A</font><font id=seq344>T</font><font id=seq345>A</font><font id=seq346>G</font><font id=seq347>C</font><font id=seq348>A</font><font id=seq349>A</font></span><span><font id=seq350>G</font><font id=seq351>A</font><font id=seq352>G</font><font id=seq353>A</font><font id=seq354>A</font><font id=seq355>G</font><font id=seq356>A</font><font id=seq357>A</font><font id=seq358>G</font><font id=seq359>C</font></span><span><font id=seq360>T</font><font id=seq361>T</font><font id=seq362>C</font><font id=seq363>C</font><font id=seq364>A</font><font id=seq365>A</font><font id=seq366>C</font><font id=seq367>T</font><font id=seq368>T</font><font id=seq369>C</font></span><span><font id=seq370>A</font><font id=seq371>G</font><font id=seq372>A</font><font id=seq373>T</font><font id=seq374>C</font><font id=seq375>T</font><font id=seq376>A</font><font id=seq377>A</font><font id=seq378>C</font><font id=seq379>T</font></span><span><font id=seq380>T</font><font id=seq381>T</font><font id=seq382>G</font><font id=seq383>G</font><font id=seq384>C</font><font id=seq385>T</font><font id=seq386>A</font><font id=seq387>C</font><font id=seq388>A</font><font id=seq389>A</font></span><span><font id=seq390>C</font><font id=seq391>A</font><font id=seq392>T</font><font id=seq393>T</font><font id=seq394>C</font><font id=seq395>C</font><font id=seq396>A</font><font id=seq397>C</font><font id=seq398>T</font><font id=seq399>A</font></span><span><font id=seq400>A</font><font id=seq401>A</font><font id=seq402>A</font><font id=seq403>C</font><font id=seq404>A</font><font id=seq405>T</font><font id=seq406>C</font><font id=seq407>T</font><font id=seq408>T</font><font id=seq409>G</font></span><span><font id=seq410>C</font><font id=seq411>A</font><font id=seq412>G</font><font id=seq413>A</font><font id=seq414>C</font><font id=seq415>A</font><font id=seq416>G</font><font id=seq417>A</font><font id=seq418>G</font><font id=seq419>T</font></span><span><font id=seq420>G</font><font id=seq421>G</font><font id=seq422>C</font><font id=seq423>C</font><font id=seq424>A</font><font id=seq425>T</font><font id=seq426>G</font><font id=seq427>T</font><font id=seq428>A</font><font id=seq429>T</font></span><span><font id=seq430>G</font><font id=seq431>T</font><font id=seq432>G</font><font id=seq433>C</font><font id=seq434>A</font><font id=seq435>T</font><font id=seq436>G</font><font id=seq437>C</font><font id=seq438>A</font><font id=seq439>T</font></span><span><font id=seq440>A</font><font id=seq441>T</font><font id=seq442>A</font><font id=seq443>C</font><font id=seq444>A</font><font id=seq445>C</font><font id=seq446>T</font><font id=seq447>C</font><font id=seq448>T</font><font id=seq449>A</font></span><span><font id=seq450>C</font><font id=seq451>A</font><font id=seq452>G</font><font id=seq453>T</font><font id=seq454>G</font><font id=seq455>C</font><font id=seq456>T</font><font id=seq457>G</font><font id=seq458>T</font><font id=seq459>T</font></span><span><font id=seq460>A</font><font id=seq461>G</font><font id=seq462>A</font><font id=seq463>C</font><font id=seq464>C</font><font id=seq465>T</font><font id=seq466>T</font><font id=seq467>T</font><font id=seq468>T</font><font id=seq469>G</font></span><span><font id=seq470>G</font><font id=seq471>C</font><font id=seq472>T</font><font id=seq473>G</font><font id=seq474>C</font><font id=seq475>A</font><font id=seq476>G</font><font id=seq477>T</font><font id=seq478>T</font><font id=seq479>T</font></span><span><font id=seq480>C</font><font id=seq481>A</font><font id=seq482>T</font><font id=seq483>G</font><font id=seq484>T</font><font id=seq485>T</font><font id=seq486>A</font><font id=seq487>G</font><font id=seq488>G</font><font id=seq489>G</font></span><span><font id=seq490>T</font><font id=seq491>C</font><font id=seq492>T</font><font id=seq493>T</font><font id=seq494>A</font><font id=seq495>C</font><font id=seq496>A</font><font id=seq497>G</font><font id=seq498>T</font><font id=seq499>G</font></span><span><font id=seq500>T</font><font id=seq501>G</font><font id=seq502>A</font><font id=seq503>A</font><font id=seq504>T</font><font id=seq505>G</font><font id=seq506>A</font><font id=seq507>C</font><font id=seq508>G</font><font id=seq509>G</font></span><span><font id=seq510>T</font><font id=seq511>G</font><font id=seq512>C</font><font id=seq513>G</font><font id=seq514>C</font><font id=seq515>A</font><font id=seq516>A</font><font id=seq517>C</font><font id=seq518>T</font><font id=seq519>C</font></span><span><font id=seq520>T</font><font id=seq521>A</font><font id=seq522>C</font><font id=seq523>A</font><font id=seq524>T</font><font id=seq525>G</font><font id=seq526>A</font><font id=seq527>T</font><font id=seq528>T</font><font id=seq529>G</font></span><span><font id=seq530>A</font><font id=seq531>C</font><font id=seq532>C</font><font id=seq533>C</font><font id=seq534>A</font><font id=seq535>T</font><font id=seq536>C</font><font id=seq537>A</font><font id=seq538>G</font><font id=seq539>G</font></span><span><font id=seq540>T</font><font id=seq541>G</font><font id=seq542>T</font><font id=seq543>T</font><font id=seq544>T</font><font id=seq545>C</font><font id=seq546>A</font><font id=seq547>T</font><font id=seq548>A</font><font id=seq549>C</font></span><span><font id=seq550>G</font><font id=seq551>G</font><font id=seq552>T</font><font id=seq553>T</font><font id=seq554>A</font><font id=seq555>T</font><font id=seq556>T</font><font id=seq557>G</font><font id=seq558>G</font><font id=seq559>G</font></span><span><font id=seq560>G</font><font id=seq561>C</font><font id=seq562>T</font><font id=seq563>G</font><font id=seq564>T</font><font id=seq565>G</font><font id=seq566>C</font><font id=seq567>C</font><font id=seq568>A</font><font id=seq569>T</font></span><span><font id=seq570>C</font><font id=seq571>G</font><font id=seq572>G</font><font id=seq573>C</font><font id=seq574>A</font><font id=seq575>A</font><font id=seq576>A</font><font id=seq577>G</font><font id=seq578>C</font><font id=seq579>C</font></span><span><font id=seq580>A</font><font id=seq581>G</font><font id=seq582>G</font><font id=seq583>C</font><font id=seq584>A</font><font id=seq585>A</font><font id=seq586>G</font><font id=seq587>C</font><font id=seq588>T</font><font id=seq589>G</font></span><span><font id=seq590>C</font><font id=seq591>A</font><font id=seq592>A</font><font id=seq593>A</font><font id=seq594>G</font><font id=seq595>A</font><font id=seq596>C</font><font id=seq597>G</font><font id=seq598>G</font><font id=seq599>A</font></span><span><font id=seq600>A</font><font id=seq601>A</font><font id=seq602>T</font><font id=seq603>A</font><font id=seq604>G</font><font id=seq605>A</font><font id=seq606>G</font><font id=seq607>A</font><font id=seq608>A</font><font id=seq609>G</font></span><span><font id=seq610>C</font><font id=seq611>T</font><font id=seq612>T</font><font id=seq613>C</font><font id=seq614>A</font><font id=seq615>G</font><font id=seq616>A</font><font id=seq617>T</font><font id=seq618>G</font><font id=seq619>A</font></span><span><font id=seq620>A</font><font id=seq621>A</font><font id=seq622>G</font><font id=seq623>A</font><font id=seq624>A</font><font id=seq625>A</font><font id=seq626>T</font><font id=seq627>G</font><font id=seq628>A</font><font id=seq629>C</font></span><span><font id=seq630>C</font><font id=seq631>T</font><font id=seq632>G</font><font id=seq633>C</font><font id=seq634>C</font><font id=seq635>G</font><font id=seq636>T</font><font id=seq637>G</font><font id=seq638>A</font><font id=seq639>T</font></span><span><font id=seq640>A</font><font id=seq641>T</font><font id=seq642>C</font><font id=seq643>G</font><font id=seq644>T</font><font id=seq645>T</font><font id=seq646>A</font><font id=seq647>A</font><font id=seq648>A</font><font id=seq649>G</font></span><span><font id=seq650>A</font><font id=seq651>A</font><font id=seq652>G</font><font id=seq653>T</font><font id=seq654>T</font><font id=seq655>G</font><font id=seq656>C</font><font id=seq657>A</font><font id=seq658>A</font><font id=seq659>A</font></span><span><font id=seq660>A</font><font id=seq661>A</font><font id=seq662>T</font><font id=seq663>A</font><font id=seq664>A</font><font id=seq665>T</font><font id=seq666>T</font><font id=seq667>T</font><font id=seq668>A</font><font id=seq669>C</font></span><span><font id=seq670>A</font><font id=seq671>T</font><font id=seq672>A</font><font id=seq673>G</font><font id=seq674>T</font><font id=seq675>A</font><font id=seq676>C</font><font id=seq677>A</font><font id=seq678>T</font><font id=seq679>G</font></span><span><font id=seq680>A</font><font id=seq681>C</font><font id=seq682>G</font><font id=seq683>A</font><font id=seq684>A</font><font id=seq685>G</font><font id=seq686>T</font><font id=seq687>T</font><font id=seq688>A</font><font id=seq689>A</font></span><span><font id=seq690>G</font><font id=seq691>G</font><font id=seq692>A</font><font id=seq693>T</font><font id=seq694>A</font><font id=seq695>A</font><font id=seq696>A</font><font id=seq697>G</font><font id=seq698>C</font><font id=seq699>T</font></span><span><font id=seq700>T</font><font id=seq701>T</font><font id=seq702>T</font><font id=seq703>G</font><font id=seq704>A</font><font id=seq705>A</font><font id=seq706>C</font><font id=seq707>T</font><font id=seq708>A</font><font id=seq709>G</font></span><span><font id=seq710>A</font><font id=seq711>A</font><font id=seq712>C</font><font id=seq713>T</font><font id=seq714>C</font><font id=seq715>A</font><font id=seq716>G</font><font id=seq717>C</font><font id=seq718>T</font><font id=seq719>G</font></span><span><font id=seq720>G</font><font id=seq721>G</font><font id=seq722>T</font><font id=seq723>T</font><font id=seq724>G</font><font id=seq725>G</font><font id=seq726>T</font><font id=seq727>G</font><font id=seq728>A</font><font id=seq729>A</font></span><span><font id=seq730>T</font><font id=seq731>T</font><font id=seq732>A</font><font id=seq733>A</font><font id=seq734>C</font><font id=seq735>T</font><font id=seq736>A</font><font id=seq737>A</font><font id=seq738>T</font><font id=seq739>G</font></span><span><font id=seq740>G</font><font id=seq741>A</font><font id=seq742>A</font><font id=seq743>G</font><font id=seq744>A</font><font id=seq745>C</font><font id=seq746>A</font><font id=seq747>T</font><font id=seq748>G</font><font id=seq749>A</font></span><span><font id=seq750>A</font><font id=seq751>A</font><font id=seq752>T</font><font id=seq753>T</font><font id=seq754>G</font><font id=seq755>T</font><font id=seq756>T</font><font id=seq757>C</font><font id=seq758>C</font><font id=seq759>A</font></span><span><font id=seq760>A</font><font id=seq761>A</font><font id=seq762>A</font><font id=seq763>G</font><font id=seq764>A</font><font id=seq765>T</font><font id=seq766>A</font><font id=seq767>T</font><font id=seq768>A</font><font id=seq769>A</font></span><span><font id=seq770>G</font><font id=seq771>A</font><font id=seq772>G</font><font id=seq773>A</font><font id=seq774>A</font><font id=seq775>G</font><font id=seq776>A</font><font id=seq777>A</font><font id=seq778>G</font><font id=seq779>C</font></span><span><font id=seq780>A</font><font id=seq781>G</font><font id=seq782>A</font><font id=seq783>G</font><font id=seq784>A</font><font id=seq785>A</font><font id=seq786>A</font><font id=seq787>T</font><font id=seq788>A</font><font id=seq789>T</font></span><span><font id=seq790>G</font><font id=seq791>C</font><font id=seq792>T</font><font id=seq793>A</font><font id=seq794>A</font><font id=seq795>G</font></div>
+            </div>
+
+            <!-- Exons -->
+            <div class="panel panel-default cpp" id="exons">
+                    <div class="panel-heading">Exons</div>
+                    <div class="panel-body">
+                        <ul class="exon-box">
+                            <li id="exon0" class="exon" onclick="hightLight('1','94',this)"><span>exon1:</span>58244848~58244941</li>
+                            <li id="exon1" class="exon" onclick="hightLight('95','83',this)"><span>exon2:</span>58247750~58247832</li>
+                            <li id="exon2" class="exon" onclick="hightLight('178','124',this)"><span>exon3:</span>58252119~58252242</li>
+                            <li id="exon3" class="exon" onclick="hightLight('302','102',this)"><span>exon4:</span>58257745~58257846</li>
+                            <li id="exon4" class="exon" onclick="hightLight('404','74',this)"><span>exon5:</span>58257925~58257998</li>
+                            <li id="exon5" class="exon" onclick="hightLight('478','73',this)"><span>exon6:</span>58260948~58261020</li>
+                            <li id="exon6" class="exon" onclick="hightLight('551','66',this)"><span>exon7:</span>58263705~58263770</li>
+                            <li id="exon7" class="exon" onclick="hightLight('617','47',this)"><span>exon8:</span>58267474~58267520</li>
+                            <li id="exon8" class="exon" onclick="hightLight('664','68',this)"><span>exon9:</span>58270418~58270485</li>
+                            <li id="exon9" class="exon" onclick="hightLight('732','65',this)"><span>exon10:</span>58270934~58270998</li>
+                            </ul>
+                    </div>
+                </div>
+            <!-- m6A sites -->
+            <!-- IRES sequence -->
+            <div class="panel panel-default cpp" id="ires">
+                    <div class="panel-heading">IRES sequence</div>
+                    <div class="panel-body">
+                        <ul class="exon-box">
+                            <li id="IRES0" class="exon" onclick="hightLight2('145-6', this)">58247800~58247805</li>
+                            <li id="IRES1" class="exon" onclick="hightLight2('168-6', this)">58247823~58247828</li>
+                            <li id="IRES2" class="exon" onclick="hightLight2('225-8', this)">58252166~58252173</li>
+                            <li id="IRES3" class="exon" onclick="hightLight2('251-7', this)">58252192~58252198</li>
+                            <li id="IRES4" class="exon" onclick="hightLight2('264-9', this)">58252205~58252213</li>
+                            <li id="IRES5" class="exon" onclick="hightLight2('341-6', this)">58257784~58257789</li>
+                            <li id="IRES6" class="exon" onclick="hightLight2('352-8', this)">58257795~58257802</li>
+                            <li id="IRES7" class="exon" onclick="hightLight2('389-6', this)">58257832~58257837</li>
+                            <li id="IRES8" class="exon" onclick="hightLight2('401-6', this)">58257844~58257927</li>
+                            <li id="IRES9" class="exon" onclick="hightLight2('438-8', this)">58257959~58257966</li>
+                            <li id="IRES10" class="exon" onclick="hightLight2('592-6', this)">58263746~58263751</li>
+                            <li id="IRES11" class="exon" onclick="hightLight2('601-6', this)">58263755~58263760</li>
+                            <li id="IRES12" class="exon" onclick="hightLight2('648-6', this)">58267505~58267510</li>
+                            <li id="IRES13" class="exon" onclick="hightLight2('657-13', this)">58267514~58270423</li>
+                            <li id="IRES14" class="exon" onclick="hightLight2('693-6', this)">58270447~58270452</li>
+                            <li id="IRES15" class="exon" onclick="hightLight2('729-6', this)">58270483~58270936</li>
+                            <li id="IRES16" class="exon" onclick="hightLight2('760-20', this)">58270962~58270981</li>
+                            <li id="IRES17" class="exon" onclick="hightLight2('785-6', this)">58270987~58270992</li>
+                            </ul>
+                    </div>
+                </div>
+            <!-- TIS -->
+            <div class="panel panel-default cpp" id="tis">
+                    <div class="panel-heading">Translation initiation site</div>
+                    <div class="panel-body">
+                        <ul class="exon-box">
+                            <li id="TIS0" class="exon" onclick="hightLight2('74-3', this)">58244921~58244923</li>
+                            </ul>
+                    </div>
+                </div>
+            <div class="panel panel-default cpp" id="orfs">
+                <div class="panel-heading">circRNA specific ORFs</div>
+                <div class="panel-body">
+                    <div class="orf-box">
+                        <div class="loc"><h5><b>Attribute</b></h5></div>
+                        <div class="chart"><h5><b>ORF struct</b></h5></div>
+                        <div class="codes"><h5><b>circRNA sequence</b></h5></div>
+                        <div class="codep"><h5><b>Amino acid sequence</b></h5></div>
+                        <div class="img"><h5><b>MS evidence</b></h5></div>
+                    </div>
+                    <div class="orf-box">
+                            <div class="loc">
+                                <ul>
+                                    <li><span class="width-100">Start: </span>74</li>
+                                    <li><span class="width-100">Stop: </span>69</li>
+                                    <li><span class="width-100">Length: </span>792</li>
+                                    <li><span class="width-100">Translation cycles: </span>1</li>
+                                </ul>
+                            </div>
+                            <div class="chart">
+                                <div id="orfChart-0" style="height: 110px;position: relative;"></div>
+                                <input type="hidden" value='{"start":9.296482412060302,"end":108.66834170854271}' id="json0">
+                            </div>
+                            <div class="codes">
+                                <div class="position-relative">
+                                    <div class="cc-box">
+                                            ATGAGCTCAATCGGCACTGGGTATGACCTGTCAGCCTCTACATTCTCTCCTGACGGAAGAGTTTTTCAAGTTGAATATGCTATGAAGGCTGTGGAAAATAGTAGTACAGCTATTGGAATCAGATGCAAAGATGGTGTTGTCTTTGGGGTAGAAAAATTAGTCCTTTCTAAACTTTATGAAGAAGGTTCCAACAAAAGACTTTTTAATGTTGATCGGCATGTTGGAATGGCAGTAGCAGGTTTGTTGGCAGATGCTCGTTCTTTAGCAGACATAGCAAGAGAAGAAGCTTCCAACTTCAGATCTAACTTTGGCTACAACATTCCACTAAAACATCTTGCAGACAGAGTGGCCATGTATGTGCATGCATATACACTCTACAGTGCTGTTAGACCTTTTGGCTGCAGTTTCATGTTAGGGTCTTACAGTGTGAATGACGGTGCGCAACTCTACATGATTGACCCATCAGGTGTTTCATACGGTTATTGGGGCTGTGCCATCGGCAAAGCCAGGCAAGCTGCAAAGACGGAAATAGAGAAGCTTCAGATGAAAGAAATGACCTGCCGTGATATCGTTAAAGAAGTTGCAAAAATAATTTACATAGTACATGACGAAGTTAAGGATAAAGCTTTTGAACTAGAACTCAGCTGGGTTGGTGAATTAACTAATGGAAGACATGAAATTGTTCCAAAAGATATAAGAGAAGAAGCAGAGAAATATGCTAAGTTTGCGGCATCCTGTGGTATAGGGGAAGCGCTCCGGGCCTGGAATCCCTACGCGTCCCTTTGGGTTTAG</div>
+                                    <div class="cc-more"><i class="fa fa-angle-down"></i></div>
+                                    <a href="/transcirc/downloadFasta?circId=TC-hsa-PSMA3_0001&orfIndex=1&type=seq"  class="cc-download"><i class="fa fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="codep">
+                                <div class="position-relative">
+                                    <div class="cc-box">
+                                            MSSIGTGYDLSASTFSPDGRVFQVEYAMKAVENSSTAIGIRCKDGVVFGVEKLVLSKLYEEGSNKRLFNVDRHVGMAVAGLLADARSLADIAREEASNFRSNFGYNIPLKHLADRVAMYVHAYTLYSAVRPFGCSFMLGSYSVNDGAQLYMIDPSGVSYGYWGCAIGKARQAAKTEIEKLQMKEMTCRDIVKEVAKIIYIVHDEVKDKAFELELSWVGELTNGRHEIVPKDIREEAEKYAKFAASCGIGEALRAWNPYASLWV*</div>
+                                    <div class="cc-more"><i class="fa fa-angle-down"></i></div>
+                                    <a href="/transcirc/downloadFasta?circId=TC-hsa-PSMA3_0001&orfIndex=1&type=peptides" class="cc-download"><i class="fa fa-download"></i></a>
+                                </div>
+                            </div>
+                            <div class="img">
+                                </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+    </div>
+</div>
+
+<div class="modal fade" id="upload">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Upload</h4>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm" class="form-horizontal">
+                    <input type="hidden" value="TC-hsa-PSMA3_0001" name="circId">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Data type</label>
+                        <div class="col-sm-5"><input type="text" class="form-control"  name="dataType" placeholder="Data type"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Method</label>
+                        <div class="col-sm-8"><input type="text" class="form-control" name="method" placeholder="Experimental method"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Author</label>
+                        <div class="col-sm-6"><input type="text" class="form-control" name="author"  placeholder="Author"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Literature</label>
+                        <div class="col-sm-8"><input type="text" class="form-control" name="pmid" placeholder="PMID"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">File</label>
+                        <div class="col-sm-8"><input type="file"  name="file" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-4" id="opeate">
+                            <a  href="javascript:void(0)" onclick="uploadFile()" class="btn btn-primary">Save</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="/transcirc/assets/js/echarts4.min.js" type="text/javascript"></script>
+<script src="/transcirc/assets/js/ecStat.js" type="text/javascript"></script>
+<script src="/transcirc/assets/js/macarons.js" type="text/javascript"></script>
+<script>
+    $('[data-toggle=tooltip]').popover({
+        html: true,
+        placement: 'bottom',
+        trigger: 'hover',
+        template: '<div class="popover" role="tooltip" style="max-width: none;"><div class="arrow"></div><div class="popover-content" style="width: 500px;color: #676767;font-size: 12px"></div></div>'
+    })
+
+    $('.cc-box').each(function () {
+        var tempString = $(this).text();
+        var num = 220
+        if (tempString.length> num) {
+            $(this).html(tempString.substring(0, num) + '...');
+            $(this).parent().find('.cc-more').click(function () {
+                var text = $(this).text()
+                if ($(this).find('i.fa').hasClass('fa-angle-down')) {
+                    $(this).parent().find('.cc-box').html(tempString);
+                    $(this).html('<i class="fa fa-angle-up"></i>')
+                } else {
+                    $(this).parent().find('.cc-box').html(tempString.substring(0, num) + '...');
+                    $(this).html('<i class="fa fa-angle-down"></i>')
+                }
+            })
+        } else {
+            $(this).parent().find('.cc-more').addClass('hidden')
+        }
+    })
+
+    $(function () {
+        var size = '1';
+        for(var i = 0; i < Number(size); i++) {
+            getEchar('orfChart-'+i,$.parseJSON($("#json"+i).val()));
+        }
+        $(".menu").find('a:contains("Data")').attr('class', 'active');
+
+        getStructureData();
+    })
+
+    function hightLight(start, len, _this) {
+        $(".exon").removeClass("active");
+        $(_this).addClass("active");
+        var index1 = parseInt(start);
+        var index2 = index1+parseInt(len);
+        $("#crs").find("font").removeClass("active");
+        for (var i = index1-1; i < index2-1; i++) {
+            $("#seq" + i).addClass("active");
+        }
+    }
+
+    /**
+     * 环状的情况
+     */
+    function hightLight2(startAndLenStr, _this) {
+        $(".exon").removeClass("active");
+        $(_this).addClass("active");
+        $("#crs").find("font").removeClass("active");
+
+        var dataArr = startAndLenStr.split(",")
+        for (var j = 0; j < dataArr.length; j++) {
+            var start = dataArr[j].split("-")[0];
+            var len = dataArr[j].split("-")[1];
+
+            var index1 = parseInt(start);
+            var index2 = index1+parseInt(len);
+
+            for (var i = index1-1; i < index2-1; i++) {
+                $("#seq" + i).addClass("active");
+            }
+        }
+
+    }
+
+    function uploadFile() {
+        var author = $("input[name='author']").val();
+        var file = $("input[name='file']").val();
+        if($.trim(author) == '') {
+            layer.msg("Author is not null",{offset:"80px"});
+            return;
+        }
+        if($.trim(file) == '') {
+            layer.msg("Please select one file",{offset:"80px"})
+            return;
+        }
+        var form = new FormData(document.getElementById("uploadForm"));
+        $.ajax({
+            url : "/transcirc/upload",
+            type: "post",
+            processData: false,
+            contentType: false,
+            data: form,
+            beforeSend: function(){
+                $("#opeate").html("<img src='/transcirc/assets/images/loading_circle.gif' width='30px'/>");
+            },
+            success : function (result) {
+                result = $.parseJSON(result);
+                if (result.code == 200) {
+                    layer.msg(result.msg,{offset:"80px"})
+                    $("#upload").modal("hide");
+                    location.reload();
+                } else {
+                    layer.msg(result.msg,{offset:"80px"})
+                }
+            },
+            complete: function(){
+                $("#opeate").html('<a  href="javascript:void(0)" onclick="uploadFile()" class="btn btn-primary">Save</a>');
+            }
+        });
+    }
+
+    var myChart = echarts.init(document.getElementById('chart-1'), 'infographic');
+    myChart.setOption({
+//        tooltip: {showContent: false},
+        grid: {
+            y: 0,
+            bottom: 0
+        },
+        radar: {
+            // shape: 'circle',
+            indicator: [
+                {name: 'RP/PP', max: 1.5},
+                {name: 'TIS', max: 1.5},
+                {name: 'IRES', max: 1.5},
+                {name: 'm6A', max: 1.5},
+                {name: 'ORF', max: 1.5},
+                {name: 'SeqComp', max: 1.5},
+                {name: 'MS', max: 1.5}
+            ]
+        },
+        series: [{
+            name: '',
+            type: 'radar',
+            // areaStyle: {normal: {}},
+            data: [
+                {
+                    value: [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3],
+                    symbolSize: 0,
+                    lineStyle: {normal: {color: '#f90', width: 1}},
+                    areaStyle: {normal: {color: '#f90', opacity: 0.3}},
+                    name: 'Basic'
+                },
+                {
+                    value: $.parseJSON('{"value":[0.3,1.3,0.7269841161349491,0.3,1.3,0.951969443050763,0.3]}').value,
+                    lineStyle: {normal: {color: '#0d6abc'}},
+                    name: 'Evidences and Grouping',
+                    areaStyle: {
+                        normal: {
+                            color:"#badbfe"
+                        }
+                    }
+                }
+            ]
+        }]
+    });
+
+    function getEchar(id,value) {
+        var start = value.start;
+        var end = value.end;
+        var arr1 = [(8+start/80),start/10];
+        var arr2 = [(8+end/80),end/10];
+        var data = [];
+        for (var i = start ; i <= end; i++) {
+            var theta = i / 10;
+            var r = 8 + theta / 8;
+            data.push([r, theta]);
+        }
+        var myChart = echarts.init(document.getElementById(id), 'infographic');
+        myChart.setOption({
+            angleAxis: [{
+                polarIndex: 0,
+                type: 'value',
+                max: 10,
+                axisLine: {show: false},
+                axisLabel: {show: false},
+                axisTick: {show: false}
+            },{
+                type: 'value',
+                polarIndex: 1,
+                max: 10,
+                axisLine: {show: false},
+                axisLabel: {show: false},
+                axisTick: {show: false}
+
+            }],
+            radiusAxis: [{
+                polarIndex: 0,
+                type: 'category',
+                data: [1,2,3],
+                z: 10,
+                axisLine: {show: false},
+                axisLabel: {show: false},
+                axisTick: {show: false}
+            },{
+                type: 'value',
+                polarIndex: 1,
+                axisLine: {show: false},
+                axisLabel: {show: false},
+                axisTick: {show: false}
+            }],
+            polar: [{},{}],
+            series: [{
+                polarIndex: 1,
+                coordinateSystem: 'polar',
+                name: 'line',
+                type: 'line',
+                lineStyle: {
+                    normal: {
+                        width:2
+                    }
+                },
+                showSymbol: false,
+                itemStyle: {
+                    normal: {
+                        color: '#ffae73'
+                    }
+                },
+                data: data
+            },{
+                polarIndex: 1,
+                coordinateSystem: 'polar',
+                name: 'line',
+                type: 'line',
+                showSymbol: false,
+                lineStyle: {normal:{color:'#3574cb'}},
+                data: [[0,0],arr1]
+            },{
+                polarIndex: 1,
+                coordinateSystem: 'polar',
+                name: 'line',
+                type: 'line',
+                showSymbol: false,
+                lineStyle: {normal:{color:'#3574cb'}},
+                data: [[0,0],arr2]
+            },{
+                name: 'aaa',
+                polarIndex: 0,
+                type: 'bar',
+                data: [null,10],
+                coordinateSystem: 'polar',
+                stack: 'a',
+                itemStyle: {
+                    normal: {
+                        color: '#bbb'
+                    }
+                }
+            }]
+        });
+    }
+
+    //----------------------------------------------- Structure start -------------------------------------//
+    function rgbToHex(r, g, b) {
+        var hex = ((r << 16) | (g << 8) | b).toString(16);
+        return "#" + new Array(Math.abs(hex.length - 7)).join("0") + hex;
+    }
+
+    function hexToRgb(hex) {
+        var rgb = [];
+        for (var i = 1; i < 7; i += 2) {
+            rgb.push(parseInt("0x" + hex.slice(i, i + 2)));
+        }
+        return rgb;
+    }
+
+    function gradient(startColor, endColor, step) {
+        var sColor = hexToRgb(startColor),
+            eColor = hexToRgb(endColor);
+
+        var rStep = (eColor[0] - sColor[0]) / step,
+            gStep = (eColor[1] - sColor[1]) / step,
+            bStep = (eColor[2] - sColor[2]) / step;
+
+        var gradientColorArr = [];
+        for (var i = 0; i < step; i++) {
+            // 计算每一步的hex值
+            gradientColorArr.push(rgbToHex(parseInt(rStep * i + sColor[0]), parseInt(gStep * i + sColor[1]), parseInt(bStep * i + sColor[2])));
+        }
+        return gradientColorArr;
+    }
+    var iresColors = gradient('#fbbc05', '#ea4335', 11)
+
+    var chart5 = echarts.init(document.getElementById('chart-5'))
+    /**
+     * Structure
+     */
+    function getStructureData() {
+        $.ajax({
+            url : "/transcirc/getStructureData",
+            type: "post",
+            data: {"circId": 'TC-hsa-PSMA3_0001'},
+            success : function (result) {
+                if (result.code == 200) {
+                    var data = result.data;
+                    var isHaveExon = data.isHaveExon;
+                    if (isHaveExon) {
+                        var series = [];
+                        //exonArr
+                        var exonArr = data.exonArr;
+                        for (var i = 0; i < exonArr.length; i++) {
+                            series.push(exonArr[i]);
+                        }
+                        //m6A 点
+                        var m6AData = data.m6AData;
+                        series.push({
+                            name: 'm6A',
+                            type: 'scatter',
+                            symbolSize: [20, 60],
+                            xAxisIndex: 1,
+                            yAxisIndex: 1,
+                            symbol: "path://M16,12l-5.5,8v20h-1V20L4,12c-0.2-0.2-0.3-0.4-0.4-0.6l-0.1-0.2h0c-0.6-1.1-1-2.4-1-3.8C2.5,3.4,5.9,0,10,0s7.5,3.4,7.5,7.5c0,1.4-0.4,2.6-1,3.8h0l-0.1,0.2C16.3,11.6,16.1,11.8,16,12z",
+                            symbolOffset: [0, '-55%'],
+                            itemStyle: {normal: {color: 'rgba(84,144,104,0.8)'}},
+                            zlevel:7,
+                            data: m6AData
+                        })
+                        //TIS点
+                        var tisData = data.tisData;
+                        series.push({
+                            name: 'TIS',
+                            type: 'scatter',
+                            symbolSize: [20, 60],
+                            xAxisIndex: 2,
+                            yAxisIndex: 2,
+                            symbol: 'path://M16.4,28.6l0.1,0.2h0c0.6,1.1,1,2.4,1,3.8c0,4.1-3.4,7.5-7.5,7.5s-7.5-3.4-7.5-7.5c0-1.4,0.4-2.6,1-3.8h0\n' +
+                                '\tl0.1-0.2C3.7,28.4,3.9,28.2,4,28l5.5-8V0h1v20l5.5,8C16.1,28.2,16.3,28.4,16.4,28.6z',
+                            symbolOffset: [0, '-55%'],
+                            itemStyle: {normal: {color: iresColors[9]}},
+                            zlevel: 4,
+                            data: tisData
+                        })
+
+                        //前三个坐标轴固定
+                        var grid = [{top: 30, height: 110, left: 100, right: 100},{top: 10, height: 140, left: 100, right: 100},{top: 85, height: 140, left: 100, right: 100}]
+                        var yAxis = [{data: ['Exons'], show: false, gridIndex: 0}, {data: ['m6A'], show: false, gridIndex: 1}, {data: ['TIS'], show: false, gridIndex: 2}]
+                        var xAxis = [{type: 'value', show: false, max: data.max, gridIndex: 0}, {type: 'value', show: false, max: data.max, gridIndex: 1}, {type: 'value', show: false, max: data.max, gridIndex: 2}]
+
+                        //IRES 区域
+                        var index = 2;
+                        var iresData = data.iresData;
+                        var key = 'IRES';
+                        for (var i = 0; i < iresData.length; i++) {
+                            index = index + 1;
+                            //每一个IRES对应一个新的坐标轴
+                            grid.push({top: 40, height: 30, left: 100, right: 100})
+                            yAxis.push({data: [key], show: false, gridIndex: index})
+                            xAxis.push({type: 'value', show: false, max: data.max, gridIndex: index})
+
+                            var areaDataObj = iresData[i];
+                            var data1 = areaDataObj.data1;
+                            var data2 = areaDataObj.data2;
+                            var data3 = areaDataObj.data3;
+                            var data4 = areaDataObj.data4;
+                            //一个环状分成两段 作为唯一标识
+                            var data5 = areaDataObj.data5;
+
+                            // console.log("data1=" + data1 + "，data2=" + data2 + "，data3=" + data3 + "，data4=" + data4)
+                            series.push({
+                                type: 'bar',
+                                barWidth: 20,
+                                stack: key+i,
+                                xAxisIndex: index,
+                                yAxisIndex: index,
+                                zlevel:3,
+                                data: [{
+                                    value: data1,
+                                    name: '',
+                                    itemStyle: {color: 'transparent'}
+                                }]
+                            })
+
+                            series.push({
+                                type: 'bar',
+                                barMaxWidth: 14,
+                                stack: key+i,
+                                xAxisIndex: index,
+                                yAxisIndex: index,
+                                markLine: {
+                                    symbol: 'none',
+                                    label: {show:false},
+                                    lineStyle: {
+                                        type: 'solid',
+                                        width: 1,
+                                        color: iresColors[3]
+                                    },
+                                    data: data2,
+                                    animationDuration: 300
+                                },
+                                zlevel:5,
+                                data: [{
+                                    customId: data5,
+                                    value: data3,
+                                    name: key,
+                                    itemStyle: {
+                                        color: iresColors[3]
+                                    },
+                                    metaData: data4
+                                }],
+                            })
+                        }
+
+                        chart5.setOption({
+                            tooltip: {
+                                formatter: function (params) {
+                                    var html = ''
+                                    var d = params.data.metaData
+                                    if (d) {
+                                        html += params.data.name + ': '
+                                        if (d.length > 1) html += d[0] + '~' + d[1]
+                                        else html += d[0]
+                                    }
+                                    return html
+                                }
+                            },
+                            grid: grid,
+                            yAxis: yAxis,
+                            xAxis: xAxis,
+                            series: series
+                        })
+                    }
+                } else {
+                    layer.msg(result.msg)
+                }
+            }
+        });
+    }
+
+    chart5.on('click',function (params) {
+        // console.log(params)
+        var customId = params.data.customId;
+        $("#"+customId).click();
+    })
+
+    //----------------------------------------------- Structure end -------------------------------------//
+    
+    function initModel(seq, locationA, locationB) {
+        //seq下载序列时使用
+        $("#title").val(locationA + "-" + locationB);
+        $("#fasta-data").val(seq);
+        $("#locationA-span").html('<span class="text-muted">LocationA: </span>' + locationA);
+        $("#locationB-span").html('<span class="text-muted">LocationB: </span>' + locationB);
+
+        $("#modal-img").modal("show")
+    }
+</script></div>
+<script id="headerJS"  hbColor='#104eb1' ngdcShowInd='1' hfColor='#ffffff' hdWidth='1200px' rightPartReserved='1' src="https://www.biosino.org/template/assets/js/header04.js"></script>
+<script id="footerJS" fbColor='#f0f5f9' ftWidth='1200px' nstiLogoShow='1' src="https://www.biosino.org/template/assets/js/footer03.js"></script>
+<script>
+    $(document).ready(function () {
+            $('.container-fluid').each(function () {
+            $(this).removeAttr('style').addClass('container')
+        })
+    })
+</script>
