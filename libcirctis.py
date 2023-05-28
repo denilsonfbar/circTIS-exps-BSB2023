@@ -151,34 +151,32 @@ def extract_circrna_subseq_around_position(circrna_na, upstream_length, downstre
 
     return full_subseq
 
-# dataset_type: 'train', 'valid', 'test'
-def extract_circrna_samples(dataset_path, dataset_type, output_samples_file):
+def extract_circrna_samples(circrna_fasta_file, tis_tsv_file, output_samples_file):
     
     sample_upstream_length = 100
     sample_downstream_length = 303 
     tis_types = ['ATG', 'CTG', 'GTG', 'TTG']
-    prop_neg_valid = 15
 
     df_samples_columns = ['circrna_id', 'TIS_type', 'TIS_position', 
-                          'sample_upstream_length', 'sample_downstream_length','sample_na', 'sample_label']
+                          'sample_upstream_length', 'sample_downstream_length',
+                          'sample_na', 'sample_label']
     df_samples = pd.DataFrame(columns=df_samples_columns)
 
-    circrna_fasta_file = dataset_path + 'seqs.fa'
-    tis_tsv_file = dataset_path + 'tis.tsv'
     df_tis = pd.read_csv(tis_tsv_file, sep='\t', header=0)
 
-    n_pos_samples_atg = 0
-    n_neg_samples_atg = 0
-    n_pos_samples_nc = 0
-    n_neg_samples_nc = 0
+    print('\n FASTA file: ', circrna_fasta_file)
+    print('Number of circRNAs: ', count_sequences_in_fasta_file(circrna_fasta_file))
 
+    circrna_counter = 0
     for circrna in SeqIO.parse(circrna_fasta_file, "fasta"):
+
+        circrna_counter += 1
+        print('Processing: ', circrna_counter)
 
         df_tis_circrna = df_tis.loc[(df_tis['circrna_id']==circrna.id)]
         ls_tis_circrna = df_tis_circrna['TIS_position'].to_list()
 
         circrna_na = str(circrna.seq)
-
         for test_position_zi in range(len(circrna_na)-3):
 
             sample_label = 0
@@ -190,43 +188,18 @@ def extract_circrna_samples(dataset_path, dataset_type, output_samples_file):
                 test_position = test_position_zi + 1  # index correction
 
                 if test_position in ls_tis_circrna:  # real TIS
-
-                    if test_codon == 'ATG': n_pos_samples_atg += 1
-                    else: n_pos_samples_nc += 1
-
                     sample_label = 1
             
                 else:  # false TIS
+                    sample_label = -1
                     
-                    if dataset_type == 'train':
-                        if test_codon == 'ATG':
-                            #  if n_neg_samples_atg < n_pos_samples_atg:
-                                n_neg_samples_atg += 1
-                                sample_label = -1
-                        else:
-                            #  if n_neg_samples_nc < n_pos_samples_nc:
-                                n_neg_samples_nc += 1
-                                sample_label = -1
-
-                    elif dataset_type == 'valid':
-                        if test_codon == 'ATG':
-                            if n_neg_samples_atg < (n_pos_samples_atg * prop_neg_valid):
-                                n_neg_samples_atg += 1
-                                sample_label = -1
-                        else:
-                            if n_neg_samples_nc < (n_pos_samples_nc * prop_neg_valid):
-                                n_neg_samples_nc += 1
-                                sample_label = -1
-
-                    elif dataset_type == 'test':
-                        sample_label = -1
-
             if sample_label != 0:
 
                 sample_na = extract_circrna_subseq_around_position(circrna_na, sample_upstream_length, sample_downstream_length, test_position_zi)
 
                 df_samples.loc[df_samples.shape[0]] = [circrna.id, circrna_na[test_position_zi:test_position_zi+3], test_position, 
-                                                       sample_upstream_length, sample_downstream_length, sample_na, sample_label]
+                                                       sample_upstream_length, sample_downstream_length, 
+                                                       sample_na, sample_label]
 
     df_samples.to_csv(output_samples_file, sep='\t', index=False)
 
