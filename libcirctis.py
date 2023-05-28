@@ -164,14 +164,14 @@ def extract_circrna_samples(circrna_fasta_file, tis_tsv_file, output_samples_fil
 
     df_tis = pd.read_csv(tis_tsv_file, sep='\t', header=0)
 
-    print('\n FASTA file: ', circrna_fasta_file)
-    print('Number of circRNAs: ', count_sequences_in_fasta_file(circrna_fasta_file))
+    print('\nFASTA file:', circrna_fasta_file)
+    n_circrnas = count_sequences_in_fasta_file(circrna_fasta_file)
 
     circrna_counter = 0
     for circrna in SeqIO.parse(circrna_fasta_file, "fasta"):
 
         circrna_counter += 1
-        print('Processing: ', circrna_counter)
+        print('Extracting:', circrna_fasta_file, '\t', circrna_counter, 'of', n_circrnas)
 
         df_tis_circrna = df_tis.loc[(df_tis['circrna_id']==circrna.id)]
         ls_tis_circrna = df_tis_circrna['TIS_position'].to_list()
