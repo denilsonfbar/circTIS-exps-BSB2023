@@ -1,0 +1,7 @@
+__pycache__/
+
+datasets/cross_validation/fold_1/train/samples.tsv
+datasets/cross_validation/fold_2/train/samples.tsv
+datasets/cross_validation/fold_3/train/samples.tsv
+datasets/cross_validation/fold_4/train/samples.tsv
+datasets/cross_validation/fold_5/train/samples.tsv
