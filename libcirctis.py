@@ -218,6 +218,16 @@ def decrease_length_samples(samples, upstream_size, downstream_size):
     return trans_samples
 
 
+def prepare_train_data(parameters, df_samples_train):
+
+    X_train = df_samples_train['sample_na'].tolist()
+    y_train = np.array(df_samples_train['sample_label'])
+
+    # Samples resize
+    X_train = decrease_length_samples(X_train, parameters['up_sample_size'], parameters['down_sample_size'])
+
+    return X_train, y_train
+
 def prepare_exp_data(parameters, df_samples_train, df_samples_test):
    
     # Train data

@@ -1,0 +1,11 @@
+name: titervenv
+dependencies:
+  - python=3.6
+  - numpy=1.16.2
+  - scikit-learn
+  - pip
+  - pip:
+    - h5py==2.6.0
+    - tensorflow==1.0.0
+    - keras==2.1.4
+    - theano
