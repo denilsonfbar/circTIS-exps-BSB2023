@@ -1,3 +1,4 @@
+import pandas as pd
 from time import time
 import datetime as dt
 import libcirctis
@@ -5,8 +6,13 @@ import libcirctis
 n_folds = 5
 output_file = 'outputs/06.tsv'
 
-upstream_length = 100
-downstream_length = 103
+parameters = {}
+parameters['kernel'] = 'WD'
+
+parameters['up_sample_size'] = 100
+parameters['down_sample_size'] = 103
+parameters['C1'] = 1.0
+parameters['C2'] = 1.0
 
 degree_values = range(1, 204)
 
@@ -15,20 +21,31 @@ df_eval = libcirctis.create_df_evaluation()
 
 for degree in degree_values:
 
-    for fold in range(1, n_folds+1):
+    # for fold in range(1, n_folds+1):
+        fold = 1
 
         start_t = time()
 
-        parameters = libcirctis.default_exp_parameters()
         parameters['fold'] = fold
-        parameters['sample_size'] = upstream_length + downstream_length
-        parameters['up_sample_size'] = upstream_length
-        parameters['down_sample_size'] = downstream_length
         parameters['degree'] = degree
-        print('\n' + dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '\t' + str(parameters['up_sample_size']) + '\t' 
-              + str(parameters['down_sample_size']) + '\t' + str(parameters['degree']) + '\t' + str(parameters['fold']))
 
-        X_train, y_train, X_test, y_test, samples_info = libcirctis.prepare_fold_data(parameters)
+        print('\n' + dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '\t' + str(parameters['up_sample_size']) + '\t' 
+        + str(parameters['down_sample_size']) + '\t' + str(parameters['degree']) + '\t' + str(parameters['C1'])
+        + '\t' + str(parameters['fold']))
+
+        train_samples_file = 'datasets/cross_validation/fold_' + str(fold) + '/train/samples.tsv'
+        test_samples_file =  'datasets/cross_validation/fold_' + str(fold) + '/validation/samples.tsv'
+
+        df_samples_train_all = pd.read_csv(train_samples_file, sep='\t', header=0)
+        df_samples_pos_train = df_samples_train_all.loc[(df_samples_train_all['sample_label'] == 1)]
+        df_samples_neg_train = df_samples_train_all.loc[(df_samples_train_all['sample_label'] == -1)]
+        df_samples_neg_train = df_samples_neg_train.sample(frac=1, random_state=721379)
+        df_samples_neg_train = df_samples_neg_train.head(df_samples_pos_train.shape[0])
+        df_samples_train = pd.concat([df_samples_pos_train, df_samples_neg_train])
+
+        df_samples_test = pd.read_csv(test_samples_file, sep='\t', header=0)
+
+        X_train, y_train, X_test, y_test, samples_info = libcirctis.prepare_exp_data(parameters, df_samples_train, df_samples_test)
 
         svm = libcirctis.train_svm (parameters, X_train, y_train)
 
