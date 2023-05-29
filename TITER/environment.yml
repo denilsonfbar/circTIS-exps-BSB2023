@@ -1,4 +1,4 @@
-name: titervenv
+name: titer_env
 dependencies:
   - python=3.6
   - numpy=1.16.2
