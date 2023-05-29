@@ -310,22 +310,22 @@ def calc_metrics_labels(dict_metrics, y_real_labels, y_pred_labels):
     dict_metrics['FN'] = FN
     dict_metrics['TN'] = TN
 
-    dict_metrics['precision'] = precision
-    dict_metrics['recall'] = recall
-    dict_metrics['f1_score'] = f1_score
+    dict_metrics['F1_score'] = f1_score
+    dict_metrics['Precision'] = precision
+    dict_metrics['Recall'] = recall
 
-    dict_metrics['specificity'] = specificity
-    dict_metrics['accuracy'] = accuracy
+    dict_metrics['Specificity'] = specificity
+    dict_metrics['Accuracy'] = accuracy
 
     return dict_metrics
 
 def calc_metrics_scores(dict_metrics, y_real_labels, y_pred_scores):
 
-    AUROC = mt.roc_auc_score(y_real_labels, y_pred_scores)
     AUPR = mt.average_precision_score(y_real_labels,y_pred_scores)
+    AUROC = mt.roc_auc_score(y_real_labels, y_pred_scores)
 
-    dict_metrics['AUROC'] = AUROC
     dict_metrics['AUPR'] = AUPR
+    dict_metrics['AUROC'] = AUROC
 
     return dict_metrics
 
@@ -378,12 +378,12 @@ def add_result_in_df_evaluation(df_eval, parameters, samples_info, times, metric
         metrics['FP'],
         metrics['FN'],
         metrics['TN'],
-        metrics['f1_score'],
+        metrics['F1_score'],
         metrics['AUPR'],
-        metrics['precision'],
-        metrics['recall'],
-        metrics['specificity'],
-        metrics['accuracy'],
+        metrics['Precision'],
+        metrics['Recall'],
+        metrics['Specificity'],
+        metrics['Accuracy'],
         metrics['AUROC'],
         samples_info['n_samples_train'],
         samples_info['n_samples_train_pos'],
@@ -401,9 +401,16 @@ def add_result_in_df_evaluation(df_eval, parameters, samples_info, times, metric
 
 def plot_line_chart(df_eval, x_axis, y_axis):
 
-    dims = (20, 12)
+    dims = (14, 8)
     fig, ax = pyplot.subplots(figsize=dims)
     pyplot.grid()
 
     for col in y_axis:
         sns.lineplot(data=df_eval, x=x_axis, y=col, legend='brief',label=col, marker="o")
+
+
+def circtis_extern_execution(circtis_path, tis_types, fasta_file, output_folder):
+
+    call_os = circtis_path + 'circtis.py -t ' + tis_types + ' -f ' + fasta_file + ' -o ' + output_folder
+
+    os.system(call_os)
