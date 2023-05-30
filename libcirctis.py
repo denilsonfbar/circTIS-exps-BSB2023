@@ -414,3 +414,23 @@ def circtis_extern_execution(circtis_path, tis_types, fasta_file, output_folder)
     call_os = circtis_path + 'circtis.py -t ' + tis_types + ' -f ' + fasta_file + ' -o ' + output_folder
 
     os.system(call_os)
+
+
+def aupr_curves_comparison(arr_real_labels, ls_arr_pred_scores):
+
+    colors = ['blue', 'red', 'green', 'cyan']
+
+    pyplot.figure(figsize=(5,5))
+
+    i = 0
+    for arr_pred_scores in ls_arr_pred_scores:
+
+        precision, recall, thresholds = mt.precision_recall_curve(arr_real_labels, arr_pred_scores)
+        pyplot.plot(recall, precision, color=colors[i])
+
+        i+=1
+
+    pyplot.title('PR curve')
+    pyplot.xlabel('Recall')
+    pyplot.ylabel('Precision')
+    pyplot.show()
