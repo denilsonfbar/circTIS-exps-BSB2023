@@ -418,9 +418,9 @@ def circtis_extern_execution(circtis_path, tis_types, fasta_file, output_folder)
 
 def aupr_curves_comparison(arr_real_labels, ls_arr_pred_scores):
 
-    colors = ['blue', 'red', 'green', 'cyan']
+    colors = ['blue', 'green', 'red', 'cyan']
 
-    pyplot.figure(figsize=(5,5))
+    pyplot.figure(figsize=(7,7))
 
     i = 0
     for arr_pred_scores in ls_arr_pred_scores:
@@ -433,4 +433,23 @@ def aupr_curves_comparison(arr_real_labels, ls_arr_pred_scores):
     pyplot.title('PR curve')
     pyplot.xlabel('Recall')
     pyplot.ylabel('Precision')
+    pyplot.show()
+
+def auroc_curves_comparison(arr_real_labels, ls_arr_pred_scores):
+
+    colors = ['blue', 'green', 'red', 'cyan']
+
+    pyplot.figure(figsize=(7,7))
+
+    i = 0
+    for arr_pred_scores in ls_arr_pred_scores:
+
+        fpr, tpr, thresholds = mt.roc_curve(arr_real_labels, arr_pred_scores)
+        pyplot.plot(fpr, tpr, color=colors[i])
+
+        i+=1
+
+    pyplot.title('ROC curve')
+    pyplot.xlabel('False Positive Rate')
+    pyplot.ylabel('True Positive Rate')
     pyplot.show()
