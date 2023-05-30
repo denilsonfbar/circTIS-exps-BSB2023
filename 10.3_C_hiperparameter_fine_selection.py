@@ -4,7 +4,7 @@ import datetime as dt
 import libcirctis
 
 n_folds = 5
-output_file = 'outputs/10.tsv'
+output_file = 'outputs/10_2.tsv'
 
 parameters = {}
 parameters['kernel'] = 'WD'
@@ -13,7 +13,7 @@ parameters['up_sample_size'] = 40
 parameters['down_sample_size'] = 255
 parameters['degree'] = parameters['up_sample_size'] + parameters['down_sample_size']
 
-C_values = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5]
+C_values = [1.0, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5]
 
 
 df_eval = libcirctis.create_df_evaluation()
