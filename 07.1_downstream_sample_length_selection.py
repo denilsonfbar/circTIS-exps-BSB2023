@@ -4,7 +4,7 @@ import datetime as dt
 import libcirctis
 
 n_folds = 5
-output_file = 'outputs/07_2.tsv'
+output_file = 'outputs/07.tsv'
 
 parameters = {}
 parameters['kernel'] = 'WD'
@@ -20,8 +20,7 @@ df_eval = libcirctis.create_df_evaluation()
 
 for downstream_length in downstream_length_values:
 
-    # for fold in range(1, n_folds+1):
-        fold = 1
+    for fold in range(1, n_folds+1):
 
         start_t = time()
 
