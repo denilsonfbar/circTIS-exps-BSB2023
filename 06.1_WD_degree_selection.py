@@ -21,8 +21,7 @@ df_eval = libcirctis.create_df_evaluation()
 
 for degree in degree_values:
 
-    # for fold in range(1, n_folds+1):
-        fold = 1
+    for fold in range(1, n_folds+1):
 
         start_t = time()
 
