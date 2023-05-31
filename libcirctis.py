@@ -401,7 +401,7 @@ def add_result_in_df_evaluation(df_eval, parameters, samples_info, times, metric
 
 def plot_line_chart(df_eval, x_axis, y_axis):
 
-    dims = (14, 8)
+    dims = (14, 6)
     fig, ax = pyplot.subplots(figsize=dims)
     pyplot.grid()
 

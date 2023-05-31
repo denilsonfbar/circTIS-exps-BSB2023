@@ -4,29 +4,29 @@ import datetime as dt
 import libcirctis
 
 n_folds = 5
-output_file = 'outputs/10_3.tsv'
+output_file = 'outputs/08.tsv'
 
 parameters = {}
 parameters['kernel'] = 'WD'
 
-parameters['up_sample_size'] = 40
-parameters['down_sample_size'] = 255
-parameters['degree'] = parameters['up_sample_size'] + parameters['down_sample_size']
+parameters['up_sample_size'] = 0
+parameters['C1'] = 1.0
+parameters['C2'] = 1.0
 
-C_values = [1.1, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.2]
+downstream_length_values = range(1, 304)
 
 
 df_eval = libcirctis.create_df_evaluation()
 
-for C in C_values:
+for downstream_length in downstream_length_values:
 
-    # for fold in range(1, n_folds+1):
-        fold = 1
+    for fold in range(1, n_folds+1):
 
         start_t = time()
 
         parameters['fold'] = fold
-        parameters['C1'] = parameters['C2'] = C
+        parameters['down_sample_size'] = downstream_length
+        parameters['degree'] = parameters['up_sample_size'] + parameters['down_sample_size']
 
         print('\n' + dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '\t' + str(parameters['up_sample_size']) + '\t' 
         + str(parameters['down_sample_size']) + '\t' + str(parameters['degree']) + '\t' + str(parameters['C1'])

@@ -10,7 +10,7 @@ parameters = {}
 parameters['kernel'] = 'WD'
 
 parameters['up_sample_size'] = 40
-parameters['down_sample_size'] = 255
+parameters['down_sample_size'] = 287
 parameters['degree'] = parameters['up_sample_size'] + parameters['down_sample_size']
 
 C_values = [0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 64.0]
@@ -20,8 +20,7 @@ df_eval = libcirctis.create_df_evaluation()
 
 for C in C_values:
 
-    # for fold in range(1, n_folds+1):
-        fold = 1
+     for fold in range(1, n_folds+1):
 
         start_t = time()
 
